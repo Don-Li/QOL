@@ -20,7 +20,7 @@
 #' }
 #' 
 open_explorer = function( path = NULL ){
-    if ( is.null(path) ){
+    if ( !is.null(path) ){
         cur_wd = normalizePath(path)
     } else{
         cur_wd = normalizePath(getwd())
