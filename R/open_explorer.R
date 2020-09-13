@@ -14,6 +14,7 @@
 #' \dontrun{
 #' # Open Windows explorer in the current directory
 #' open_explorer()
+#' 
 #' # Open windows explorer in your desktop
 #' open_explorer("C:/whoami/Desktop")
 #' }

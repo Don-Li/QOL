@@ -9,3 +9,4 @@ Description: A collection of functions to improve your life.
 License: y0l0
 Imports: Rcpp (>= 1.0.5)
 LinkingTo: Rcpp, RcppArmadillo
+RoxygenNote: 7.1.1
