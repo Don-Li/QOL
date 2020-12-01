@@ -7,7 +7,7 @@
 open_explorer(path = NULL)
 }
 \arguments{
-\item{path}{}
+\item{path}{Optional file path to open the explorer window at.}
 }
 \value{
 No return values. This function is invoked for the side-effect of opening Windows 

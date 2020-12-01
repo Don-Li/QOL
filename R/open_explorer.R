@@ -1,7 +1,8 @@
 #' Open explorer
 #'
 #' @param path 
-#'
+#' Optional file path to open the explorer window at.
+#' 
 #' @return
 #' No return values. This function is invoked for the side-effect of opening Windows 
 #' explorer at a given directory.
