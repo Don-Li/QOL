@@ -20,9 +20,17 @@
 #' @examples
 grepl_get = function( pattern, x, x_names = T, negate = FALSE, ignore.case = FALSE ){
     if ( x_names ){
-        return_ = names(x)[ grepl( pattern, names(x) ) ]
+        if ( negate ){
+            return_ = names(x)[ !grepl( pattern, names(x) ) ]
+        } else{
+            return_ = names(x)[ grepl( pattern, names(x) ) ]
+        }
     } else{
-        return_ = x[ grepl( pattern, x ) ]
+        if ( negate ){
+            return_ = x[ !grepl( pattern, x ) ]
+        } else{
+            return_ = x[ grepl( pattern, x ) ]
+        }
     }
     return_
 }
