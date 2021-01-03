@@ -6,6 +6,18 @@
 
 using namespace Rcpp;
 
+// ks
+double ks(arma::colvec sample_1, arma::colvec sample_2);
+RcppExport SEXP _QOL_ks(SEXP sample_1SEXP, SEXP sample_2SEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< arma::colvec >::type sample_1(sample_1SEXP);
+    Rcpp::traits::input_parameter< arma::colvec >::type sample_2(sample_2SEXP);
+    rcpp_result_gen = Rcpp::wrap(ks(sample_1, sample_2));
+    return rcpp_result_gen;
+END_RCPP
+}
 // rcpparma_hello_world
 arma::mat rcpparma_hello_world();
 RcppExport SEXP _QOL_rcpparma_hello_world() {
@@ -51,6 +63,7 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
+    {"_QOL_ks", (DL_FUNC) &_QOL_ks, 2},
     {"_QOL_rcpparma_hello_world", (DL_FUNC) &_QOL_rcpparma_hello_world, 0},
     {"_QOL_rcpparma_outerproduct", (DL_FUNC) &_QOL_rcpparma_outerproduct, 1},
     {"_QOL_rcpparma_innerproduct", (DL_FUNC) &_QOL_rcpparma_innerproduct, 1},
