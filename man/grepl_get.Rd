@@ -4,7 +4,7 @@
 \alias{grepl_get}
 \title{grepl names}
 \usage{
-grepl_get(pattern, x, x_names = T, ignore.case = FALSE)
+grepl_get(pattern, x, x_names = T, negate = FALSE, ignore.case = FALSE)
 }
 \arguments{
 \item{pattern}{character string containing a regular experssion.}
@@ -13,6 +13,8 @@ grepl_get(pattern, x, x_names = T, ignore.case = FALSE)
 
 \item{x_names}{logical. If \code{TRUE}, return matching names of \code{x}. Otherwise,
 return the matching elements of \code{x}.}
+
+\item{negate}{logical. If \code{TRUE}, negates the matching of \code{pattern}.}
 
 \item{ignore.case}{if \code{FALSE}, the pattern matching is case sensitive.}
 }

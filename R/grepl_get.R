@@ -7,6 +7,8 @@
 #' @param x_names 
 #' logical. If \code{TRUE}, return matching names of \code{x}. Otherwise,
 #' return the matching elements of \code{x}.
+#' @param negate
+#' logical. If \code{TRUE}, negates the matching of \code{pattern}.
 #' @param ignore.case 
 #' if \code{FALSE}, the pattern matching is case sensitive.
 #'
@@ -16,11 +18,11 @@
 #' @export
 #'
 #' @examples
-grepl_get = function( pattern, x, x_names = T, ignore.case = FALSE ){
+grepl_get = function( pattern, x, x_names = T, negate = FALSE, ignore.case = FALSE ){
     if ( x_names ){
-        return_ = names(x)[ grepl( pattern, x, ) ]
+        return_ = names(x)[ grepl( pattern, names(x) ) ]
     } else{
-        return_ = x[ grepl( pattern, x, ) ]
+        return_ = x[ grepl( pattern, x ) ]
     }
     return_
 }
